@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dac1o2qup2b51"]
+
+[ext_resource type="Script" uid="uid://2avpnuxgjdh5" path="res://scripts/intro_video.gd" id="1_f3j0u"]
+[ext_resource type="VideoStream" uid="uid://decm8ycn4q1ry" path="res://assets/video/Intro-MOF.ogv" id="2_ecwpw"]
+
+[node name="IntroVideo" type="Control" unique_id=2105250913]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_f3j0u")
+
+[node name="VideoPlayer" type="VideoStreamPlayer" parent="." unique_id=1025978865]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+stream = ExtResource("2_ecwpw")
+autoplay = true
+expand = true
+
+[node name="FadeRect" type="ColorRect" parent="." unique_id=910062293]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0

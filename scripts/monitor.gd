@@ -2,11 +2,21 @@ extends Area2D
 
 signal activated
 
-@onready var indicator: CanvasItem = $Indicator
+@export var off_texture: Texture2D
+@export var on_texture: Texture2D
+
 @onready var sprite: Sprite2D = $Sprite2D
+@onready var indicator: CanvasItem = $Indicator
 
 var is_activated := false
 var pulse_time := 0.0
+
+
+func _ready() -> void:
+	body_entered.connect(_on_body_entered)
+
+	if off_texture != null:
+		sprite.texture = off_texture
 
 
 func _process(delta: float) -> void:
@@ -15,16 +25,11 @@ func _process(delta: float) -> void:
 
 	pulse_time += delta
 
-	# Movimiento suave hacia arriba y abajo
-	indicator.position.y = -80 + sin(pulse_time * 4.0) * 8.0
-
-	# Pulso de tamaño
+	var float_offset := sin(pulse_time * 4.0) * 8.0
 	var pulse_scale := 1.0 + sin(pulse_time * 5.0) * 0.15
+
+	indicator.position.y = -80 + float_offset
 	indicator.scale = Vector2(pulse_scale, pulse_scale)
-
-
-func _ready() -> void:
-	body_entered.connect(_on_body_entered)
 
 
 func _on_body_entered(body: Node2D) -> void:
@@ -34,11 +39,10 @@ func _on_body_entered(body: Node2D) -> void:
 	if body.name == "Human":
 		is_activated = true
 
-		# Oculta el indicador cuando el monitor ya fue activado
-		indicator.visible = false
+		if on_texture != null:
+			sprite.texture = on_texture
 
-		# Feedback visual temporal: cambia el color del monitor
-		sprite.modulate = Color(0.3, 1.0, 0.3)
+		indicator.visible = false
 
 		print(name, " activado")
 		activated.emit()

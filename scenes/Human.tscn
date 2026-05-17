@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://by6rxgq85tp1e"]
 
 [ext_resource type="Script" uid="uid://c1ioec4gcnajr" path="res://scripts/human.gd" id="1_77oia"]
-[ext_resource type="Texture2D" uid="uid://8jjbxwkm37vf" path="res://assets/sprites/SLHKVxxj.webp" id="2_77oia"]
+[ext_resource type="Texture2D" uid="uid://pspgviqdny7y" path="res://assets/sprites/png videojuego/ChatGPT Image 17 may 2026, 10_26_23 a.m..png" id="2_0mhri"]
+[ext_resource type="Texture2D" uid="uid://1hkruunqmauf" path="res://assets/sprites/png videojuego/ChatGPT Image 17 may 2026, 10_28_25 a.m..png" id="3_62cmq"]
+[ext_resource type="Texture2D" uid="uid://bpy2eb08wmv1s" path="res://assets/sprites/png videojuego/ChatGPT Image 17 may 2026, 10_30_59 a.m..png" id="4_gohyp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_77oia"]
 size = Vector2(43.5, 62.5)
@@ -10,31 +12,40 @@ size = Vector2(43.5, 62.5)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_77oia")
+"texture": ExtResource("2_0mhri")
 }],
 "loop": true,
 "name": &"idle",
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_77oia")
+"duration": 8.0,
+"texture": ExtResource("3_62cmq")
+}, {
+"duration": 8.0,
+"texture": ExtResource("4_gohyp")
 }],
 "loop": true,
 "name": &"walk",
-"speed": 5.0
+"speed": 8.0
 }]
 
 [node name="Human" type="CharacterBody2D" unique_id=1588872184]
 z_index = 20
 script = ExtResource("1_77oia")
+flee_speed = 170.0
+fear_radius = 360.0
+collapse_radius = 15.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1592785774]
 position = Vector2(0, 30)
 shape = SubResource("RectangleShape2D_77oia")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1331479401]
+modulate = Color(0.933207, 0.933207, 0.9332069, 1)
+self_modulate = Color(0.89492244, 0.89492244, 0.8949224, 1)
 position = Vector2(0, 18)
 scale = Vector2(0.17142807, 0.1444494)
 sprite_frames = SubResource("SpriteFrames_xv3dh")
 animation = &"walk"
+frame_progress = 0.92607504

@@ -2,12 +2,16 @@
 
 [ext_resource type="Script" uid="uid://brxlfy0ap2l5u" path="res://scripts/monitor.gd" id="1_ckkhn"]
 [ext_resource type="Texture2D" uid="uid://t88r6weh50oh" path="res://assets/sprites/WhatsApp Image 2026-05-17 at 12.06.13 AM.jpeg" id="2_ckkhn"]
+[ext_resource type="Texture2D" uid="uid://ctvqmf3cjm6n8" path="res://assets/sprites/png videojuego/ChatGPT Image 17 may 2026, 10_33_11 a.m..png" id="2_hpieq"]
+[ext_resource type="Texture2D" uid="uid://brwvf6ak5tfkg" path="res://assets/sprites/png videojuego/ChatGPT Image 17 may 2026, 10_34_55 a.m..png" id="3_e2cdi"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hpieq"]
 radius = 182.0
 
 [node name="Monitor" type="Area2D" unique_id=313370515]
 script = ExtResource("1_ckkhn")
+off_texture = ExtResource("2_hpieq")
+on_texture = ExtResource("3_e2cdi")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2082321656]
 position = Vector2(7.9999995, -3.9999998)
@@ -25,6 +29,3 @@ offset_right = 30.0
 offset_bottom = -57.0
 scale = Vector2(4, 4)
 text = "!!!!"
-
-[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1630935258]
-position = Vector2(18, -83)

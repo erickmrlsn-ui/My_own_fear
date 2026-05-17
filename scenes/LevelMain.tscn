@@ -207,7 +207,7 @@ size = Vector2(92, 20)
 size = Vector2(138.5, 26.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dwukv"]
-size = Vector2(26, 75)
+size = Vector2(25, 58)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_njurh"]
 size = Vector2(73, 6)
@@ -395,6 +395,15 @@ size = Vector2(428.5, 70)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wecp1"]
 size = Vector2(189, 69)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_faxnm"]
+size = Vector2(80, 80.627075)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bvn6t"]
+size = Vector2(184.93945, 72.776306)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_efbky"]
+size = Vector2(136, 129.85156)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wqt00"]
 size = Vector2(294.73535, 102)
 
@@ -407,10 +416,15 @@ size = Vector2(24, 179)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_efiv3"]
 size = Vector2(347, 181)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6m3wd"]
+size = Vector2(135.56696, 142)
+
 [node name="LevelMain" type="Node2D" unique_id=1277313231]
 z_index = -10
 
 [node name="FondoMapa" type="Sprite2D" parent="." unique_id=96260158]
+modulate = Color(0.5481645, 0.54816467, 0.5481644, 1)
+self_modulate = Color(0.5019608, 0.5019608, 0.5019608, 1)
 z_index = -10
 position = Vector2(0, 3)
 texture = ExtResource("1_ma6ov")
@@ -694,7 +708,7 @@ position = Vector2(917.75, -522.25)
 shape = SubResource("RectangleShape2D_jaisx")
 
 [node name="CollisionShape2D70" type="CollisionShape2D" parent="Paredes_Maestras" unique_id=1753991366]
-position = Vector2(836, -515.5)
+position = Vector2(835.5, -507)
 shape = SubResource("RectangleShape2D_dwukv")
 
 [node name="CollisionShape2D71" type="CollisionShape2D" parent="Paredes_Maestras" unique_id=1099890571]
@@ -946,6 +960,18 @@ position = Vector2(-375.5, -337.5)
 shape = SubResource("RectangleShape2D_wecp1")
 disabled = true
 
+[node name="CollisionShape2D136" type="CollisionShape2D" parent="Paredes_Maestras" unique_id=909262764]
+position = Vector2(494, 271.31354)
+shape = SubResource("RectangleShape2D_faxnm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paredes_Maestras/CollisionShape2D136" unique_id=92998570]
+position = Vector2(-858.4697, -1028.9253)
+shape = SubResource("RectangleShape2D_bvn6t")
+
+[node name="CollisionShape2D135" type="CollisionShape2D" parent="Paredes_Maestras" unique_id=1176071258]
+position = Vector2(-203, 928.0742)
+shape = SubResource("RectangleShape2D_efbky")
+
 [node name="CollisionShape2D128" type="CollisionShape2D" parent="Paredes_Maestras" unique_id=2093885517]
 position = Vector2(-702, -329)
 shape = SubResource("RectangleShape2D_wqt00")
@@ -962,6 +988,10 @@ shape = SubResource("RectangleShape2D_8kf0v")
 position = Vector2(-584, 355.5)
 shape = SubResource("RectangleShape2D_efiv3")
 
+[node name="CollisionShape2D134" type="CollisionShape2D" parent="Paredes_Maestras" unique_id=2126204958]
+position = Vector2(-585.78345, 671.54846)
+shape = SubResource("RectangleShape2D_6m3wd")
+
 [node name="PlayerSpawn" type="Marker2D" parent="." unique_id=1448113264]
 position = Vector2(-571, 491)
 
@@ -970,9 +1000,11 @@ position = Vector2(906, -839)
 
 [node name="Monitor1" type="Marker2D" parent="." unique_id=112340159]
 position = Vector2(-899, -74)
+rotation = 2.5315986
 
 [node name="Monitor2" type="Marker2D" parent="." unique_id=1093656431]
 position = Vector2(-905, -866)
+rotation = -0.00041953954
 
 [node name="Monitor3" type="Marker2D" parent="." unique_id=1515700397]
 position = Vector2(920, 20)

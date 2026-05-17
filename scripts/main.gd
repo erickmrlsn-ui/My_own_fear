@@ -36,6 +36,11 @@ func _process(_delta: float) -> void:
 	if game_finished and Input.is_key_pressed(KEY_R):
 		get_tree().reload_current_scene()
 
+	if not game_finished and Input.is_action_just_pressed("debug_activate_monitor"):
+		debug_activate_monitor()
+
+	if not game_finished and Input.is_action_just_pressed("debug_win"):
+		win_game()
 
 func place_objects_from_level() -> void:
 	if not has_node("LevelMain"):
@@ -97,9 +102,11 @@ func win_game() -> void:
 	shadow.can_move = false
 	human.can_move = false
 
-	message_label.text = "VICTORIA - Presiona R para reiniciar"
+	message_label.text = "VICTORIA - Despertando..."
 	print("VICTORIA: activaste los 3 monitores")
 
+	await get_tree().create_timer(1.5).timeout
+	get_tree().change_scene_to_file("res://scenes/OutroVideo.tscn")
 
 func update_ui() -> void:
 	monitor_label.text = "Monitores: " + str(activated_monitors) + "/3"
@@ -107,3 +114,14 @@ func update_ui() -> void:
 func update_camera() -> void:
 	game_camera.global_position = shadow.global_position
 	game_camera.zoom = Vector2(0.65, 0.65)
+func debug_activate_monitor() -> void:
+	if activated_monitors >= 3:
+		return
+
+	activated_monitors += 1
+	update_ui()
+
+	print("DEBUG: monitor activado manualmente: ", activated_monitors, "/3")
+
+	if activated_monitors >= 3:
+		win_game()
