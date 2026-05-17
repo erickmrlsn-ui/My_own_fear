@@ -24,7 +24,7 @@ position = Vector2(-247, 316)
 position = Vector2(121, -428)
 
 [node name="Monitor1" parent="Monitors" unique_id=313370515 instance=ExtResource("3_0bbpv")]
-position = Vector2(-51, -256)
+position = Vector2(-55, -256)
 
 [node name="Monitor2" parent="Monitors" unique_id=1333874150 instance=ExtResource("3_0bbpv")]
 position = Vector2(916, 197)
