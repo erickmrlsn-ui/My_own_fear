@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://b4cmrx0mqmwgo"]
+
+[ext_resource type="VideoStream" uid="uid://dbgxnucfes3yt" path="res://assets/video/Outro-MOF.ogv" id="1_7rc4k"]
+[ext_resource type="Script" uid="uid://dpklqouhn41m3" path="res://scripts/outro_video.gd" id="1_a8hdc"]
+
+[node name="OutroVideo" type="Control" unique_id=1892649902]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_a8hdc")
+
+[node name="VideoPlayer" type="VideoStreamPlayer" parent="." unique_id=456825283]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+stream = ExtResource("1_7rc4k")
+autoplay = true
+expand = true
+
+[node name="FadeRect" type="ColorRect" parent="." unique_id=1932616028]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
