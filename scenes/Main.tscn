@@ -1,12 +1,27 @@
 [gd_scene format=3 uid="uid://yd1gyrd8soa"]
 
-[ext_resource type="PackedScene" uid="uid://27ggx1yd8cb5" path="res://scenes/Player.tscn" id="1_rvslj"]
+[ext_resource type="Script" uid="uid://doeei14ubl5jq" path="res://scripts/main.gd" id="1_rarhs"]
 [ext_resource type="PackedScene" uid="uid://biywnin8goq7b" path="res://scenes/Shadow.tscn" id="2_0bbpv"]
+[ext_resource type="PackedScene" uid="uid://by6rxgq85tp1e" path="res://scenes/Human.tscn" id="2_rarhs"]
+[ext_resource type="PackedScene" uid="uid://cxgo32oj7duki" path="res://scenes/Monitor.tscn" id="3_0bbpv"]
 
 [node name="Main" type="Node2D" unique_id=707647601]
-
-[node name="Player" parent="." unique_id=212871337 instance=ExtResource("1_rvslj")]
-position = Vector2(300, 300)
+script = ExtResource("1_rarhs")
 
 [node name="Shadow" parent="." unique_id=1893767447 instance=ExtResource("2_0bbpv")]
-position = Vector2(700, 300)
+position = Vector2(0.3, 267)
+scale = Vector2(0.5, 0.5)
+
+[node name="Human" parent="." unique_id=1588872184 instance=ExtResource("2_rarhs")]
+position = Vector2(348, 124)
+
+[node name="Monitors" type="Node2D" parent="." unique_id=975767890]
+
+[node name="Monitor1" parent="Monitors" unique_id=313370515 instance=ExtResource("3_0bbpv")]
+position = Vector2(438, 427)
+
+[node name="Monitor2" parent="Monitors" unique_id=1333874150 instance=ExtResource("3_0bbpv")]
+position = Vector2(916, 197)
+
+[node name="Monitor3" parent="Monitors" unique_id=1660689763 instance=ExtResource("3_0bbpv")]
+position = Vector2(621, 76)

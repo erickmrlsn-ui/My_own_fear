@@ -1,18 +1,8 @@
 extends CharacterBody2D
 
-@export var speed: float = 130.0
-
-var player: CharacterBody2D
+@export var speed: float = 180.0
 
 func _physics_process(delta: float) -> void:
-	if player == null:
-		return
-
-	var direction := global_position.direction_to(player.global_position)
+	var direction := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	velocity = direction * speed
 	move_and_slide()
-
-	for i in get_slide_collision_count():
-		var collision := get_slide_collision(i)
-		if collision.get_collider() == player:
-			player.die()

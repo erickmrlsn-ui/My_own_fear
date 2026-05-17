@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://by6rxgq85tp1e"]
+
+[ext_resource type="Script" uid="uid://c1ioec4gcnajr" path="res://scripts/human.gd" id="1_77oia"]
+[ext_resource type="Texture2D" uid="uid://8jjbxwkm37vf" path="res://assets/sprites/SLHKVxxj.webp" id="2_77oia"]
+[ext_resource type="Texture2D" uid="uid://dsc620cjdw74c" path="res://assets/sprites/Screenshot 2026-05-16 221604.png" id="3_i3t7p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_77oia"]
+size = Vector2(221, 749)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xv3dh"]
+animations = [{
+"frames": [{
+"duration": 5.0,
+"texture": ExtResource("2_77oia")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 5.0,
+"texture": ExtResource("3_i3t7p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_77oia")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[node name="Human" type="CharacterBody2D" unique_id=1588872184]
+script = ExtResource("1_77oia")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1592785774]
+position = Vector2(-2.5, -8.5)
+shape = SubResource("RectangleShape2D_77oia")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1331479401]
+position = Vector2(14, -9.999996)
+scale = Vector2(0.89614534, 1.064686)
+sprite_frames = SubResource("SpriteFrames_xv3dh")
+animation = &"walk"
+frame_progress = 0.42043793
