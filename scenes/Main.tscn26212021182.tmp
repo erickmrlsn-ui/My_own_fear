@@ -13,7 +13,7 @@ position = Vector2(0.3, 267)
 scale = Vector2(0.5, 0.5)
 
 [node name="Human" parent="." unique_id=1588872184 instance=ExtResource("2_rarhs")]
-position = Vector2(225, 246)
+position = Vector2(348, 124)
 
 [node name="Monitors" type="Node2D" parent="." unique_id=975767890]
 
@@ -27,19 +27,3 @@ position = Vector2(916, 197)
 position = Vector2(621, 76)
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=307176990]
-
-[node name="MonitorLabel" type="Label" parent="UI" unique_id=484502376]
-offset_left = 20.0
-offset_top = 20.0
-offset_right = 133.0
-offset_bottom = 69.0
-text = "Monitores: 0/3
-"
-
-[node name="MessageLabel" type="Label" parent="UI" unique_id=1393033475]
-offset_left = 20.0
-offset_top = 60.0
-offset_right = 371.0
-offset_bottom = 109.0
-text = "Consigue que el humano active los monitores
-"

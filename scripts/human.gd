@@ -8,9 +8,12 @@ signal collapsed
 
 var shadow: CharacterBody2D
 var is_collapsed := false
+var can_move := true
 
-func _physics_process(delta: float) -> void:
-	if shadow == null or is_collapsed:
+func _physics_process(_delta: float) -> void:
+	if shadow == null or is_collapsed or not can_move:
+		velocity = Vector2.ZERO
+		move_and_slide()
 		return
 
 	var distance := global_position.distance_to(shadow.global_position)
