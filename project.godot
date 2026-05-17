@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="My_own_fear"
-run/main_scene="uid://yd1gyrd8soa"
+run/main_scene="uid://c4638nwe71htj"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 

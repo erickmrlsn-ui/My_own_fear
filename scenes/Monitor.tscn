@@ -16,3 +16,15 @@ texture = ExtResource("2_ckkhn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1147630991]
 shape = SubResource("CircleShape2D_hpieq")
+
+[node name="Indicator" type="Label" parent="." unique_id=542705680]
+modulate = Color(1, 0, 0, 1)
+offset_left = -10.0
+offset_top = -80.0
+offset_right = 30.0
+offset_bottom = -57.0
+scale = Vector2(4, 4)
+text = "!!!!"
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1630935258]
+position = Vector2(18, -83)
