@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cxgo32oj7duki"]
+
+[ext_resource type="Script" uid="uid://brxlfy0ap2l5u" path="res://scripts/monitor.gd" id="1_ckkhn"]
+[ext_resource type="Texture2D" uid="uid://t88r6weh50oh" path="res://assets/sprites/WhatsApp Image 2026-05-17 at 12.06.13 AM.jpeg" id="2_ckkhn"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hpieq"]
+radius = 182.0
+
+[node name="Monitor" type="Area2D" unique_id=313370515]
+script = ExtResource("1_ckkhn")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2082321656]
+position = Vector2(7.9999995, -3.9999998)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_ckkhn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1147630991]
+shape = SubResource("CircleShape2D_hpieq")
