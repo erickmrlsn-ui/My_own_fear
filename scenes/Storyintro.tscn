@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://c5ra5yt1y8yib"]
+
+[ext_resource type="Texture2D" uid="uid://dts4djrh4fxc1" path="res://assets/ui/story_hospital.jpeg" id="1_gjpad"]
+
+[node name="Storyintro" type="Control" unique_id=834322131]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="StoryImage" type="TextureRect" parent="." unique_id=1401397144]
+layout_mode = 0
+offset_right = 1536.0
+offset_bottom = 1024.0
+texture = ExtResource("1_gjpad")
+stretch_mode = 6
