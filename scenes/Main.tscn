@@ -29,7 +29,6 @@ position = Vector2(0, 5)
 script = ExtResource("1_rarhs")
 
 [node name="LevelMain" parent="." unique_id=1277313231 instance=ExtResource("5_vcsgt")]
-position = Vector2(406, -575)
 
 [node name="Shadow" parent="." unique_id=1893767447 instance=ExtResource("2_0bbpv")]
 position = Vector2(51, 264)

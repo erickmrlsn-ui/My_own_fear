@@ -32,10 +32,10 @@ animations = [{
 
 [node name="Human" type="CharacterBody2D" unique_id=1588872184]
 z_index = 20
+position = Vector2(-2, 1)
 script = ExtResource("1_77oia")
-flee_speed = 170.0
-fear_radius = 360.0
-collapse_radius = 15.0
+fear_radius = 300.0
+collapse_radius = 13.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1592785774]
 position = Vector2(0, 30)

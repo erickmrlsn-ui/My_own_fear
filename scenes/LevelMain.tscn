@@ -276,7 +276,7 @@ size = Vector2(53, 78)
 size = Vector2(332, 68)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fm7jw"]
-size = Vector2(148.5, 47.5)
+size = Vector2(126, 79.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ajtrd"]
 size = Vector2(164, 67)
@@ -309,7 +309,7 @@ size = Vector2(24, 179)
 size = Vector2(52, 36)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_scnt3"]
-size = Vector2(202, 48)
+size = Vector2(185, 48)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6uah2"]
 size = Vector2(348, 36)
@@ -668,11 +668,11 @@ position = Vector2(652, -784.5)
 shape = SubResource("RectangleShape2D_vmned")
 
 [node name="CollisionShape2D60" type="CollisionShape2D" parent="Paredes_Maestras" unique_id=865842508]
-position = Vector2(622.5, -735.5)
+position = Vector2(622.5, -732.5)
 shape = SubResource("RectangleShape2D_pa1n2")
 
 [node name="CollisionShape2D61" type="CollisionShape2D" parent="Paredes_Maestras" unique_id=1392313692]
-position = Vector2(628.875, -624)
+position = Vector2(628.875, -628)
 shape = SubResource("RectangleShape2D_r36nu")
 
 [node name="CollisionShape2D62" type="CollisionShape2D" parent="Paredes_Maestras" unique_id=1372729118]
@@ -800,7 +800,7 @@ position = Vector2(-799, 585)
 shape = SubResource("RectangleShape2D_dp7kx")
 
 [node name="CollisionShape2D94" type="CollisionShape2D" parent="Paredes_Maestras" unique_id=933114758]
-position = Vector2(693.75, -138.75)
+position = Vector2(705, -121.75)
 shape = SubResource("RectangleShape2D_fm7jw")
 
 [node name="CollisionShape2D95" type="CollisionShape2D" parent="Paredes_Maestras" unique_id=1796088667]
@@ -844,7 +844,7 @@ position = Vector2(333, -143)
 shape = SubResource("RectangleShape2D_513uq")
 
 [node name="CollisionShape2D105" type="CollisionShape2D" parent="Paredes_Maestras" unique_id=1329251828]
-position = Vector2(459, -139)
+position = Vector2(450.5, -139)
 shape = SubResource("RectangleShape2D_scnt3")
 
 [node name="CollisionShape2D106" type="CollisionShape2D" parent="Paredes_Maestras" unique_id=1748223177]
