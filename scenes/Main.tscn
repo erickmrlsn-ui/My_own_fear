@@ -4,21 +4,27 @@
 [ext_resource type="PackedScene" uid="uid://biywnin8goq7b" path="res://scenes/Shadow.tscn" id="2_0bbpv"]
 [ext_resource type="PackedScene" uid="uid://by6rxgq85tp1e" path="res://scenes/Human.tscn" id="2_rarhs"]
 [ext_resource type="PackedScene" uid="uid://cxgo32oj7duki" path="res://scenes/Monitor.tscn" id="3_0bbpv"]
+[ext_resource type="PackedScene" uid="uid://gt8qu6m347mo" path="res://scenes/LevelMain.tscn" id="5_vcsgt"]
 
 [node name="Main" type="Node2D" unique_id=707647601]
+position = Vector2(0, 5)
 script = ExtResource("1_rarhs")
 
+[node name="LevelMain" parent="." unique_id=1277313231 instance=ExtResource("5_vcsgt")]
+position = Vector2(406, -575)
+
 [node name="Shadow" parent="." unique_id=1893767447 instance=ExtResource("2_0bbpv")]
-position = Vector2(0.3, 267)
+position = Vector2(51, 264)
 scale = Vector2(0.5, 0.5)
 
 [node name="Human" parent="." unique_id=1588872184 instance=ExtResource("2_rarhs")]
-position = Vector2(225, 246)
+position = Vector2(-247, 316)
 
 [node name="Monitors" type="Node2D" parent="." unique_id=975767890]
+position = Vector2(121, -428)
 
 [node name="Monitor1" parent="Monitors" unique_id=313370515 instance=ExtResource("3_0bbpv")]
-position = Vector2(438, 427)
+position = Vector2(-51, -256)
 
 [node name="Monitor2" parent="Monitors" unique_id=1333874150 instance=ExtResource("3_0bbpv")]
 position = Vector2(916, 197)
@@ -43,3 +49,5 @@ offset_right = 371.0
 offset_bottom = 109.0
 text = "Consigue que el humano active los monitores
 "
+
+[node name="GameCamera" type="Camera2D" parent="." unique_id=293119980]

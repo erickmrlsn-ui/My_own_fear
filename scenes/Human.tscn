@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://8jjbxwkm37vf" path="res://assets/sprites/SLHKVxxj.webp" id="2_77oia"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_77oia"]
-size = Vector2(78.5, 136.5)
+size = Vector2(43.5, 62.5)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xv3dh"]
 animations = [{
@@ -16,21 +16,25 @@ animations = [{
 "name": &"idle",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_77oia")
+}],
 "loop": true,
 "name": &"walk",
 "speed": 5.0
 }]
 
 [node name="Human" type="CharacterBody2D" unique_id=1588872184]
+z_index = 20
 script = ExtResource("1_77oia")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1592785774]
-position = Vector2(-3.25, 23.25)
+position = Vector2(0, 30)
 shape = SubResource("RectangleShape2D_77oia")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1331479401]
 position = Vector2(0, 18)
 scale = Vector2(0.17142807, 0.1444494)
 sprite_frames = SubResource("SpriteFrames_xv3dh")
-animation = &"idle"
+animation = &"walk"
