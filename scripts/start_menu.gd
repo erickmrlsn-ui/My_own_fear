@@ -15,4 +15,4 @@ func _on_play_pressed() -> void:
 	tween.finished.connect(_go_to_story)
 
 func _go_to_story() -> void:
-	get_tree().change_scene_to_file("res://scenes/StoryIntro.tscn")
+	get_tree().change_scene_to_file("res://scenes/Main.tscn")
